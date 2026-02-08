@@ -113,11 +113,11 @@ gh workflow run sync-secrets.yml --repo <user>/secrets-sync
 
 ## Documentation
 
-- **[Setup Guide](docs/setup.md)** - Detailed PAT creation and configuration
-- **[Configuration](docs/configuration.md)** - Advanced config options
+- **[Setup Guide](SETUP.md)** - Detailed PAT creation and configuration
+- **[Configuration](CONFIGURATION.md)** - Advanced config options
 - **[Security](SECURITY.md)** - Architecture and best practices
-- **[Forking Guide](docs/forking.md)** - How fork-friendly features work
-- **[Troubleshooting](docs/troubleshooting.md)** - Common issues and solutions
+- **[Forking Guide](FORKING.md)** - How fork-friendly features work
+- **[Troubleshooting](TROUBLESHOOTING.md)** - Common issues and solutions
 
 ## How it works
 
