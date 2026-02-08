@@ -19,7 +19,7 @@ The `GH_PAT_SECRETS_SYNC_ACTION` token powers all sync operations.
    - **Token name**: `secrets-sync-action`
    - **Expiration**: 90 days recommended (set calendar reminder)
    - **Resource owner**: Your GitHub username
-   - **Repository access**: All repositories
+   - **Repository access**: Select the repositories that need secrets synced
    - **Permissions** (only these two):
      - **Secrets**: Read and write
      - **Metadata**: Read-only (automatically selected)
@@ -31,16 +31,8 @@ The `GH_PAT_SECRETS_SYNC_ACTION` token powers all sync operations.
 - `Secrets: Read and write` - Required to create/update secrets in target repos
 - `Metadata: Read-only` - Required to verify repository access
 
-**⚠️ Security Note on "All repositories" access:**
-
-"All repositories" means the PAT can write secrets to ANY repository you create
-in the future. If you prefer tighter security, use "Only select repositories"
-and manually add each target repo. However, you'll need to update the PAT
-configuration every time you add a new repository to sync.
-
 GitHub's API automatically blocks access to repos outside your ownership, even
-with this token. The token CANNOT access repositories belonging to other users
-or organizations unless you have explicit write access to them.
+with this token.
 
 ## Setting Secrets
 

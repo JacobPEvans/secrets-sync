@@ -31,7 +31,7 @@ The configuration automatically adapts to your GitHub username.
 2. Configure **exactly** as follows:
    - Token name: `secrets-sync-action`
    - Expiration: 90 days (recommended)
-   - Repository access: All repositories
+   - Repository access: Select the repositories that need secrets synced
    - Permissions:
      - **Secrets**: ✅ Read and write
      - **Metadata**: ✅ Read-only (auto-selected)
