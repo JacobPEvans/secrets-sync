@@ -32,7 +32,6 @@ Explicit targets for `GH_PAT_WORKFLOW_DISPATCH`:
 ## Triggers
 
 - **Push to main**: Runs when the workflow file changes.
-- **Weekly schedule**: Monday 6am UTC to catch new repos.
 - **Manual dispatch**: With optional dry-run mode.
 
 ## Adding a New Secret
