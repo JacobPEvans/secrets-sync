@@ -2,7 +2,20 @@
 
 Security architecture and best practices for secrets-sync.
 
-## Safety Architecture (3 Layers)
+## ⚠️ Critical: Enable Branch Protection
+
+**Before using this tool with production secrets, enable branch protection on
+`main`.**
+
+Without branch protection, anyone with write access can:
+
+- Modify `secrets-config.yml` to add their repositories
+- Trigger secret syncs without review
+- Change workflow behavior to exfiltrate secrets
+
+[Setup instructions →](#setting-up-branch-protection)
+
+## Defense-in-Depth Architecture (3 Layers)
 
 ### 1. Fine-grained PAT Scope
 
@@ -49,11 +62,23 @@ Now changes to these files require your explicit approval before merge.
 
 ## What This Does NOT Protect Against
 
-- **Compromised GitHub account**: If your account is compromised, an attacker
-  can modify secrets directly
-- **Malicious collaborators**: Anyone with write access can modify the config
+- **Compromised GitHub account**: If your account credentials are stolen,
+  attackers can:
+  - Modify secrets directly via GitHub UI or API
+  - Change `secrets-config.yml` to sync secrets to their repositories
+  - Steal the PAT and use it to access your repos
+  - Trigger workflow runs to exfiltrate secrets
+- **Malicious collaborators**: Anyone with write access to this repo can:
+  - Modify `secrets-config.yml` to add their repositories
+  - Trigger workflow runs to sync secrets
+  - Extract secret values via workflow logs if secrets are accidentally echo'd
+  - Modify the workflow to exfiltrate secrets to external services
 - **Secret values in config**: Never put actual secret values in
-  `secrets-config.yml` (only names and repos)
+  `secrets-config.yml` (only names and repos). The config file is
+  version-controlled and visible in git history, including to anyone who forks
+  your repo
+- **Workflow log exposure**: Secrets accidentally echo'd or printed in workflow
+  logs become visible to anyone with read access to the repository
 
 ## Best Practices
 

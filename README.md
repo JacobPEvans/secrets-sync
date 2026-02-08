@@ -28,9 +28,15 @@ The configuration automatically adapts to your GitHub username.
 ### 2. Create a Personal Access Token
 
 1. Go to [github.com/settings/personal-access-tokens/new][pat]
-2. Configure: `secrets-sync-action`, All repositories
-3. Permissions: `Secrets: Read and write`, `Metadata: Read-only`
-4. Generate and copy the token
+2. Configure **exactly** as follows:
+   - Token name: `secrets-sync-action`
+   - Expiration: 90 days (recommended)
+   - Repository access: All repositories
+   - Permissions:
+     - **Secrets**: ✅ Read and write
+     - **Metadata**: ✅ Read-only (auto-selected)
+     - All other permissions: ❌ Unselected
+3. Generate and **immediately copy** the token (you won't see it again)
 
 ### 3. Set the PAT
 
