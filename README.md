@@ -115,7 +115,7 @@ gh workflow run sync-secrets.yml --repo <user>/secrets-sync
 
 - **[Setup Guide](docs/setup.md)** - Detailed PAT creation and configuration
 - **[Configuration](docs/configuration.md)** - Advanced config options
-- **[Security](docs/security.md)** - Architecture and best practices
+- **[Security](SECURITY.md)** - Architecture and best practices
 - **[Forking Guide](docs/forking.md)** - How fork-friendly features work
 - **[Troubleshooting](docs/troubleshooting.md)** - Common issues and solutions
 
@@ -141,12 +141,11 @@ supports the `__SELF__` marker for profile repositories.
 - **No wildcards**: No regex patterns or bulk operations
 - **Branch protection**: Recommended for `secrets-config.yml` changes
 
-See [Security Guide](docs/security.md) for complete architecture.
+See [Security Guide](SECURITY.md) for complete architecture.
 
 ## Contributing
 
-Contributions welcome! See [docs/contributing.md](docs/contributing.md) for
-guidelines.
+Contributions welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ## License
 
