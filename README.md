@@ -19,7 +19,7 @@ Explicit targets for `GH_PAT_WORKFLOW_DISPATCH`:
 
 ## Safety Architecture (3 Layers)
 
-1. **Fine-grained PAT** (`SECRETS_SYNC_PAT`): Scoped to
+1. **Fine-grained PAT** (`GH_PAT_SECRETS_SYNC_ACTION`): Scoped to
    `JacobPEvans` owner only, with `Secrets: Read and write`
    and `Metadata: Read-only` permissions. The GitHub API
    blocks access to any repo outside this owner.
@@ -52,7 +52,7 @@ Explicit targets for `GH_PAT_WORKFLOW_DISPATCH`:
             JacobPEvans/target-repo
           REPOSITORIES_LIST_REGEX: false
           DRY_RUN: ${{ inputs.dry_run || 'false' }}
-          GITHUB_TOKEN: ${{ secrets.SECRETS_SYNC_PAT }}
+          GITHUB_TOKEN: ${{ secrets.GH_PAT_SECRETS_SYNC_ACTION }}
         env:
           NEW_SECRET_NAME: ${{ secrets.NEW_SECRET_NAME }}
 ```
@@ -63,7 +63,7 @@ Explicit targets for `GH_PAT_WORKFLOW_DISPATCH`:
 
 ## PAT Rotation
 
-The `SECRETS_SYNC_PAT` fine-grained PAT powers all sync
+The `GH_PAT_SECRETS_SYNC_ACTION` fine-grained PAT powers all sync
 jobs. To rotate:
 
 1. Create a new fine-grained PAT at
@@ -74,7 +74,7 @@ jobs. To rotate:
    - **Permissions**: Secrets (Read and write),
      Metadata (Read-only)
 1. Update the secret:
-   `gh secret set SECRETS_SYNC_PAT --repo JacobPEvans/secrets-sync`
+   `gh secret set GH_PAT_SECRETS_SYNC_ACTION --repo JacobPEvans/secrets-sync`
 1. Trigger a dry run to verify: dispatch workflow with
    `dry_run: true`.
 
