@@ -2,14 +2,12 @@
 
 [![Sync Secrets](https://github.com/JacobPEvans/secrets-sync/actions/workflows/sync-secrets.yml/badge.svg)](https://github.com/JacobPEvans/secrets-sync/actions/workflows/sync-secrets.yml)
 
-Centralized GitHub Actions secret management. Define secrets once, sync them
-everywhere automatically.
+Centralized GitHub Actions secret management. Define secrets once, sync them everywhere automatically.
 
 ## What is this?
 
-Manage GitHub Actions secrets across multiple repositories from a single
-location. Instead of manually updating `API_TOKEN` in 20 different repos,
-update it once here and let GitHub Actions sync it everywhere.
+Manage GitHub Actions secrets across multiple repositories from a single location.
+Instead of manually updating `API_TOKEN` in 20 different repos, update it once here and let GitHub Actions sync it everywhere.
 
 **Key features:**
 
@@ -95,7 +93,7 @@ secrets:
 - Comments are supported and encouraged
 - Changes to this file trigger automatic syncs
 
-See [Configuration Guide](docs/configuration.md) for detailed options.
+See [Configuration Guide](CONFIGURATION.md) for detailed options.
 
 ## Usage
 
@@ -131,8 +129,7 @@ secrets-config.yml → GitHub Actions → GitHub API → Target Repos
 3. Matrix job syncs each secret to target repos
 4. GitHub API writes secrets to repositories
 
-The workflow uses `github.repository_owner` for fork-friendly operation and
-supports the `__SELF__` marker for profile repositories.
+The workflow uses `github.repository_owner` for fork-friendly operation and supports the `__SELF__` marker for profile repositories.
 
 ## Security
 
@@ -153,8 +150,7 @@ See [LICENSE](LICENSE) file.
 
 ## Acknowledgments
 
-Built with [jpoehnelt/secrets-sync-action][action] by
-[@jpoehnelt](https://github.com/jpoehnelt).
+Built with [jpoehnelt/secrets-sync-action][action] by [@jpoehnelt](https://github.com/jpoehnelt).
 
 [action]: https://github.com/jpoehnelt/secrets-sync-action
 [pat]: https://github.com/settings/personal-access-tokens/new
