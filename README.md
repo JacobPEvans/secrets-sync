@@ -13,6 +13,7 @@ to target repos automatically.
 | `GH_PAT_WORKFLOW_DISPATCH`  | `ai-assistant-*` etc. | Explicit list |
 | `CLAUDE_CODE_OAUTH_TOKEN`   | All `JacobPEvans/`    | Regex         |
 | `GH_PAC_METRICS_TOKEN`      | `JacobPEvans` profile | Explicit list |
+| `GH_APP_PRIVATE_KEY`        | `JacobPEvans` profile | Explicit list |
 
 Explicit targets for `GH_PAT_WORKFLOW_DISPATCH`:
 `ai-assistant-instructions`, `claude-code-plugins`, `.github`.
