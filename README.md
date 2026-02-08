@@ -11,12 +11,13 @@ to target repos automatically.
 | Secret                      | Target Repos          | Method        |
 | --------------------------- | --------------------- | ------------- |
 | `GH_PAT_WORKFLOW_DISPATCH`  | `ai-assistant-*` etc. | Explicit list |
-| `CLAUDE_CODE_OAUTH_TOKEN`   | All `JacobPEvans/`    | Regex         |
+| `CLAUDE_CODE_OAUTH_TOKEN`   | Approved repos (20)   | Explicit list |
 | `GH_PAC_METRICS_TOKEN`      | `JacobPEvans` profile | Explicit list |
 | `GH_APP_PRIVATE_KEY`        | `JacobPEvans` profile | Explicit list |
 
-Explicit targets for `GH_PAT_WORKFLOW_DISPATCH`:
-`ai-assistant-instructions`, `claude-code-plugins`, `.github`.
+All secrets use explicit repository allowlists. See workflow file
+for complete list. This ensures secrets are only distributed to
+actively maintained repos that require them.
 
 ## Safety Architecture (3 Layers)
 
@@ -24,9 +25,9 @@ Explicit targets for `GH_PAT_WORKFLOW_DISPATCH`:
    `JacobPEvans` owner only, with `Secrets: Read and write`
    and `Metadata: Read-only` permissions. The GitHub API
    blocks access to any repo outside this owner.
-1. **Repository patterns**: Explicit repo lists for targeted
-   syncs; anchored regex (`^JacobPEvans/`) for "all repos".
-   No unanchored patterns.
+1. **Explicit allowlists**: All secrets use explicit repository
+   lists. No regex patterns. Repos must be explicitly added to
+   the workflow file to receive secrets.
 1. **Private repo**: Workflow config is invisible without
    explicit access.
 
