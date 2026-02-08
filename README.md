@@ -51,10 +51,10 @@ error-prone. This repo automates that process using GitHub Actions.
 **Steps:**
 
 1. You define secrets and target repos in `secrets-config.yml`
-1. You store the secret values in this repo's GitHub secrets
-1. Workflow runs (on push or manual trigger)
-1. GitHub Actions API writes secrets to target repos
-1. All repos now have the latest secret values
+2. You store the secret values in this repo's GitHub secrets
+3. Workflow runs (on push or manual trigger)
+4. GitHub Actions API writes secrets to target repos
+5. All repos now have the latest secret values
 
 ## Prerequisites
 
@@ -76,14 +76,14 @@ adapts to your GitHub username.
 ### 2. Create a Personal Access Token
 
 1. Go to [github.com/settings/personal-access-tokens/new][pat]
-1. Configure:
+2. Configure:
    - **Name**: `secrets-sync-action`
    - **Resource owner**: Your username
    - **Repository access**: All repositories
    - **Permissions**:
      - `Secrets`: Read and write
      - `Metadata`: Read-only
-1. Click "Generate token" and copy it immediately
+3. Click "Generate token" and copy it immediately
 
 ### 3. Set the PAT in your fork
 
@@ -187,7 +187,7 @@ Edit `secrets-config.yml` and remove the repo from the list. The workflow does
 To fully remove:
 
 1. Edit `secrets-config.yml` and push
-1. Manually delete from the target repo:
+2. Manually delete from the target repo:
 
 ```bash
 gh secret remove SECRET_NAME --repo <your-username>/target-repo
@@ -201,15 +201,15 @@ The `GH_PAT_SECRETS_SYNC_ACTION` token powers all sync operations. Here's how
 to create it:
 
 1. Visit [github.com/settings/personal-access-tokens/new][pat]
-1. Token name: `secrets-sync-action`
-1. Expiration: Choose based on your security policy (90 days recommended)
-1. Resource owner: Your GitHub username
-1. Repository access: All repositories
-1. Permissions (only these two):
+2. Token name: `secrets-sync-action`
+3. Expiration: Choose based on your security policy (90 days recommended)
+4. Resource owner: Your GitHub username
+5. Repository access: All repositories
+6. Permissions (only these two):
    - **Secrets**: Read and write
    - **Metadata**: Read-only (automatically selected)
-1. Click "Generate token"
-1. Copy the token immediately
+7. Click "Generate token"
+8. Copy the token immediately
 
 **Why these specific permissions?**
 
@@ -328,10 +328,10 @@ Becomes: `yourname/my-app`
 **What you need to do:**
 
 1. Fork the repo
-1. Create your own PAT (see Setup)
-1. Edit `secrets-config.yml` with your repo names
-1. Set your secrets
-1. Push
+2. Create your own PAT (see Setup)
+3. Edit `secrets-config.yml` with your repo names
+4. Set your secrets
+5. Push
 
 Everything else adapts automatically.
 
@@ -346,12 +346,12 @@ This repo is designed with defense-in-depth:
    - GitHub API blocks writes to repos you don't own
    - Only two permissions: Secrets (read/write), Metadata (read-only)
 
-1. **Explicit allowlists**
+2. **Explicit allowlists**
    - `secrets-config.yml` contains explicit repository names
    - No regex patterns or wildcards
    - Every repo must be explicitly listed
 
-1. **Branch protection (recommended)**
+3. **Branch protection (recommended)**
    - Enable branch protection on `main`
    - Require pull request reviews for `secrets-config.yml` changes
    - Use `CODEOWNERS` to require approval from specific users
@@ -361,12 +361,12 @@ This repo is designed with defense-in-depth:
 Protect the `main` branch to prevent unauthorized secret distribution:
 
 1. Go to Settings → Branches → Add rule
-1. Branch name pattern: `main`
-1. Enable:
+2. Branch name pattern: `main`
+3. Enable:
    - Require pull request reviews before merging
    - Require approvals: 1
    - Dismiss stale reviews when new commits are pushed
-1. (Optional) Require status checks to pass (once you have CI)
+4. (Optional) Require status checks to pass (once you have CI)
 
 ### CODEOWNERS integration
 
@@ -385,7 +385,7 @@ Now changes to `secrets-config.yml` require your explicit approval.
 To rotate the `GH_PAT_SECRETS_SYNC_ACTION` token:
 
 1. Create a new PAT (see Setup → Creating the required PAT)
-1. Update the secret:
+2. Update the secret:
 
 ```bash
 gh secret set GH_PAT_SECRETS_SYNC_ACTION --repo <your-username>/secrets-sync
@@ -460,9 +460,9 @@ Understanding what this tool does and doesn't do:
 **Fix**:
 
 1. Go to [github.com/settings/personal-access-tokens][pat-settings]
-1. Find `secrets-sync-action` token
-1. Verify permissions: `Secrets: Read and write`, `Metadata: Read-only`
-1. Verify repository access includes target repos
+2. Find `secrets-sync-action` token
+3. Verify permissions: `Secrets: Read and write`, `Metadata: Read-only`
+4. Verify repository access includes target repos
 
 ### Workflow fails with "Not Found"
 
@@ -471,8 +471,8 @@ Understanding what this tool does and doesn't do:
 **Fix**:
 
 1. Verify repo name in `secrets-config.yml` (check for typos)
-1. Ensure repo owner matches token owner
-1. Confirm repo exists: `gh repo view <owner>/<repo>`
+2. Ensure repo owner matches token owner
+3. Confirm repo exists: `gh repo view <owner>/<repo>`
 
 ### Secret not updating in target repo
 
@@ -481,10 +481,10 @@ Understanding what this tool does and doesn't do:
 **Fix**:
 
 1. Check secret name spelling in `secrets-config.yml`
-1. Verify secret exists in this repo:
+2. Verify secret exists in this repo:
    `gh secret list --repo <owner>/secrets-sync`
-1. Check workflow logs: `gh run view --log`
-1. Manually trigger: `gh workflow run sync-secrets.yml`
+3. Check workflow logs: `gh run view --log`
+4. Manually trigger: `gh workflow run sync-secrets.yml`
 
 ### `__SELF__` not resolving correctly
 
@@ -493,8 +493,8 @@ Understanding what this tool does and doesn't do:
 **Fix**:
 
 1. Verify you forked (not cloned) the repo
-1. Check workflow logs for `OWNER` and `PROFILE_REPO` values
-1. Re-run workflow: `gh run rerun <run-id>`
+2. Check workflow logs for `OWNER` and `PROFILE_REPO` values
+3. Re-run workflow: `gh run rerun <run-id>`
 
 ### Dry run passes but production run fails
 
@@ -504,8 +504,8 @@ Understanding what this tool does and doesn't do:
 
 1. Check PAT hasn't expired:
    [github.com/settings/personal-access-tokens][pat-settings]
-1. Review workflow logs for specific errors
-1. Try syncing one secret at a time to isolate the issue
+2. Review workflow logs for specific errors
+3. Try syncing one secret at a time to isolate the issue
 
 ### Getting "Bad credentials" error
 
@@ -543,10 +543,10 @@ Open an issue with:
 ### Pull requests
 
 1. Fork and create a branch
-1. Make your changes
-1. Test with dry-run mode
-1. Update README if behavior changes
-1. Submit PR with clear description
+2. Make your changes
+3. Test with dry-run mode
+4. Update README if behavior changes
+5. Submit PR with clear description
 
 ### Code of conduct
 

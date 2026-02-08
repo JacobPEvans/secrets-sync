@@ -62,9 +62,9 @@ in the log stream while the action is processing multiple repos simultaneously.
 To identify the actual failing repo:
 
 1. Look for errors in the full log context (before and after)
-1. Check which repos were successfully synced
-1. Compare the success list against the target repo list
-1. The missing repo is the one that failed
+2. Check which repos were successfully synced
+3. Compare the success list against the target repo list
+4. The missing repo is the one that failed
 
 The action continues on error and logs all successes, so the absence of a
 success message is more reliable than the presence of an error message in a
@@ -108,7 +108,7 @@ This repo automatically adapts when forked:
 When forked, user only needs to:
 
 1. Create their own PAT
-1. Edit `secrets-config.yml` with their repo names
-1. Push
+2. Edit `secrets-config.yml` with their repo names
+3. Push
 
 Everything else adapts automatically.
