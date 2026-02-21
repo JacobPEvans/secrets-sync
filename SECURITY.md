@@ -7,7 +7,7 @@ with write access can modify config and trigger syncs.
 
 ## Architecture
 
-1. **PAT scope**: Token scoped to owner, `Secrets: Read/write` only
+1. **PAT scope**: Token scoped to owner, `Secrets: Read/write`, `Metadata: Read-only`
 2. **Explicit allowlists**: Every repo must be listed in config
 3. **Branch protection**: Require PR reviews for config changes
 
