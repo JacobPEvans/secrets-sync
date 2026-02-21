@@ -4,7 +4,15 @@
 
 ### "Resource not accessible"
 
-PAT lacks permissions. Check token scopes.
+Two common causes:
+
+1. **PAT lacks permissions** — Check token scopes (`Secrets: Read/write`, `Metadata: Read-only`).
+2. **Archived repository** — The GitHub API rejects secret writes to archived repos with this same
+   error. Remove the repo from `secrets-config.yml`. Verify before adding:
+
+   ```bash
+   gh repo view <owner>/<repo> --json isArchived --jq '.isArchived'
+   ```
 
 ### "Not Found"
 
