@@ -25,5 +25,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_JSON: ${{ steps.release.outputs.pr }}
         run: |
-          PR_NUMBER=$(echo "$PR_JSON" | jq -r '.number')
+          set -euo pipefail
+          # jq is pre-installed on ubuntu-latest runners
+          PR_NUMBER=$(printf '%s' "$PR_JSON" | jq -r '.number')
           gh pr merge --repo "$GITHUB_REPOSITORY" --auto --rebase "$PR_NUMBER"
