@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.2.1](https://github.com/JacobPEvans/secrets-sync/compare/v0.2.0...v0.2.1) (2026-03-05)
+
+
+### Bug Fixes
+
+* never log repo names in PAT validation errors ([161940b](https://github.com/JacobPEvans/secrets-sync/commit/161940b53b2a0d9eb4a4741cbc19fdf812934dba))
+* never log repo names in visibility check errors ([4f09129](https://github.com/JacobPEvans/secrets-sync/commit/4f091299ccd947100ff2217df467b54d87ea841a))
+* parse PR number in shell to avoid fromJson on empty output ([c8d7cbd](https://github.com/JacobPEvans/secrets-sync/commit/c8d7cbd01919b2b39dcb7984713c6e3bd2afeccb))
+* remove inaccessible repos and add PAT access guard ([180adcd](https://github.com/JacobPEvans/secrets-sync/commit/180adcd5f388131010dca4a4ed79266f9321af66))
+* remove inaccessible repos and add PAT access validation ([bfe0b5e](https://github.com/JacobPEvans/secrets-sync/commit/bfe0b5e6dd28b059a2cc28c600d3cf29a004c8db))
+* remove splunk-homeassistant, splunk-templates, unifi-backup-decrypt ([177d4af](https://github.com/JacobPEvans/secrets-sync/commit/177d4af06896d6cb268d790abf81b6f13ecc10ac))
+* replace visibility guard with PAT access validation ([dae37f2](https://github.com/JacobPEvans/secrets-sync/commit/dae37f243fdad9dded02636cce26d3e995887285))
+* restore all repos, add public-only visibility guard ([32c0942](https://github.com/JacobPEvans/secrets-sync/commit/32c09424c9c6391ecac4cd5455a9915be80ae705))
+* use printf instead of echo for safer JSON piping ([ad561db](https://github.com/JacobPEvans/secrets-sync/commit/ad561db2541c72733858d9a0bd6dc35500d5f717))
+* validate all unique repos and improve config documentation ([98b6a01](https://github.com/JacobPEvans/secrets-sync/commit/98b6a011ae0c1b6dfe66fc7dda29bdb74cb222a7))
+
 ## [0.2.0](https://github.com/JacobPEvans/secrets-sync/compare/v0.1.0...v0.2.0) (2026-03-05)
 
 
