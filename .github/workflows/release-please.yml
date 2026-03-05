@@ -24,4 +24,4 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_NUMBER: ${{ fromJson(steps.release.outputs.pr).number }}
-        run: gh pr merge --repo "$GITHUB_REPOSITORY" --auto --merge "$PR_NUMBER"
+        run: gh pr merge --repo "$GITHUB_REPOSITORY" --auto --rebase "$PR_NUMBER"
