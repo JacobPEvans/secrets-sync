@@ -4,28 +4,10 @@ on:
   push:
     branches: [main]
 
-# Workflow-level permissions set the maximum for all jobs.
-# permissions: {} silently skips all jobs in cross-repo calls.
 permissions:
   contents: write
   pull-requests: write
 
 jobs:
   release-please:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      pull-requests: write
-    steps:
-      - uses: googleapis/release-please-action@v4
-        id: release
-      - name: Enable auto-merge on release PR
-        if: ${{ steps.release.outputs.pr != '' }}
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PR_JSON: ${{ steps.release.outputs.pr }}
-        run: |
-          set -euo pipefail
-          # jq is pre-installed on ubuntu-latest runners
-          PR_NUMBER=$(printf '%s' "$PR_JSON" | jq -r '.number')
-          gh pr merge --repo "$GITHUB_REPOSITORY" --auto --rebase "$PR_NUMBER"
+    uses: JacobPEvans/.github/.github/workflows/_release-please.yml@main
