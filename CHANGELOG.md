@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://github.com/JacobPEvans/secrets-sync/compare/v0.2.1...v0.3.0) (2026-03-07)
+
+
+### Features
+
+* **renovate:** extend org-wide shared preset ([2782f16](https://github.com/JacobPEvans/secrets-sync/commit/2782f1620765e556a34c2ea897783aa44714ddd0))
+
 ## [0.2.1](https://github.com/JacobPEvans/secrets-sync/compare/v0.2.0...v0.2.1) (2026-03-05)
 
 
