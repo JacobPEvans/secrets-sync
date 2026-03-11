@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.0](https://github.com/JacobPEvans/secrets-sync/compare/v0.4.0...v0.5.0) (2026-03-11)
+
+
+### Features
+
+* distribute GH App secrets to nix-ai, nix-darwin, nix-home ([#23](https://github.com/JacobPEvans/secrets-sync/issues/23)) ([b1e1264](https://github.com/JacobPEvans/secrets-sync/commit/b1e12648b085919b9739359f2e0ca68c9a9409b5))
+
 ## [0.4.0](https://github.com/JacobPEvans/secrets-sync/compare/v0.3.0...v0.4.0) (2026-03-11)
 
 
