@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.0](https://github.com/JacobPEvans/secrets-sync/compare/v0.3.0...v0.4.0) (2026-03-11)
+
+
+### Features
+
+* add GH_ACTION_JACOBPEVANS_APP_ID and expand GH_PAT_WORKFLOW_DISPATCH distribution ([#24](https://github.com/JacobPEvans/secrets-sync/issues/24)) ([3acd031](https://github.com/JacobPEvans/secrets-sync/commit/3acd0313a244fda94bba869ba1bf1ef8e1eedc2c))
+
 ## [0.3.0](https://github.com/JacobPEvans/secrets-sync/compare/v0.2.1...v0.3.0) (2026-03-07)
 
 
