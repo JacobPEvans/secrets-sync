@@ -36,12 +36,12 @@ Actions secrets.
 
 ```text
 secrets-sync repo
-  └─ distributes GH_ACTION_DOPPLER_IAC_CONF_MGMT ──► ansible-proxmox-apps
-                                            │
-                                            └─ CI runtime: dopplerhq/secrets-fetch-action
-                                                 └─ fetches from iac-conf-mgmt/prd
-                                                      ├─ MSSQL_SA_PASSWORD
-                                                      └─ QDRANT_API_KEY
+  └─ distributes GH_ACTION_DOPPLER_IAC_CONF_MGMT ──► <infra-repo>
+                                                          │
+                                                          └─ CI runtime: dopplerhq/secrets-fetch-action
+                                                               └─ fetches from iac-conf-mgmt/prd
+                                                                    ├─ MSSQL_SA_PASSWORD
+                                                                    └─ QDRANT_API_KEY
 ```
 
 **Why this split?** Adding `iac-conf-mgmt/prd` to the Tier 1 auto-sync would
