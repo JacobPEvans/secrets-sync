@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.1](https://github.com/JacobPEvans/secrets-sync/compare/v0.6.0...v0.6.1) (2026-03-19)
+
+
+### Bug Fixes
+
+* distribute GitHub App secrets to all release-please repos ([b275326](https://github.com/JacobPEvans/secrets-sync/commit/b275326ef91f1f554acbf2cdaf06f0eed5cc9515))
+
 ## [0.6.0](https://github.com/JacobPEvans/secrets-sync/compare/v0.5.0...v0.6.0) (2026-03-19)
 
 
