@@ -26,8 +26,9 @@ Actions secrets, and the sync workflow distributes them to target repos.
 
 Secrets from `iac-conf-mgmt/prd` needed only by specific infra repos (e.g.
 `MSSQL_SA_PASSWORD`, `QDRANT_API_KEY`). Infra repos fetch these at CI runtime
-using `dopplerhq/secrets-fetch-action` — they are never stored in GitHub
-Actions secrets.
+using `dopplerhq/secrets-fetch-action` — those infra secret values are never
+stored in GitHub Actions secrets; only the read-only Doppler token
+(`GH_ACTION_DOPPLER_IAC_CONF_MGMT`) is stored as a GitHub Actions secret.
 
 - Scoped to one Doppler config (`iac-conf-mgmt/prd`)
 - Never duplicated into the secrets-sync Doppler project
