@@ -32,8 +32,8 @@ Examples: Slack webhooks, Claude tokens, GitHub App keys, PATs.
 ### Tier 2 — Infrastructure-specific secrets (per-repo runtime fetch)
 
 Use for secrets that originate in `iac-conf-mgmt/prd` and are needed only by
-specific infra repos. These secrets are **never added to `secrets-config.yml`**
-and are never stored in GitHub Actions secrets.
+specific infra repos. The **infra secret values** are never added to
+`secrets-config.yml` and are never stored in GitHub Actions secrets.
 
 Instead, infra repos hold `GH_ACTION_DOPPLER_IAC_CONF_MGMT` (a read-only service token for
 `iac-conf-mgmt/prd`) and fetch secrets at CI runtime using
