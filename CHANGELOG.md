@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.6.0](https://github.com/JacobPEvans/secrets-sync/compare/v0.5.0...v0.6.0) (2026-03-19)
+
+
+### Features
+
+* add claude-code-plugins to github app repos ([#27](https://github.com/JacobPEvans/secrets-sync/issues/27)) ([a6aa9d8](https://github.com/JacobPEvans/secrets-sync/commit/a6aa9d8c632e701dd84621b1b4cda6a6e862c3ce))
+* introduce two-tier secret distribution architecture ([aec4bca](https://github.com/JacobPEvans/secrets-sync/commit/aec4bca7f508374c2e38ae4275061dcbf76a794b))
+
+
+### Bug Fixes
+
+* standardize release-please workflow and config ([1ea1120](https://github.com/JacobPEvans/secrets-sync/commit/1ea1120fbc034899d8b4424c8f9a8eda39d9e1c7))
+
 ## [0.5.0](https://github.com/JacobPEvans/secrets-sync/compare/v0.4.0...v0.5.0) (2026-03-11)
 
 
