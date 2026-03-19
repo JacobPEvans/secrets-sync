@@ -41,7 +41,7 @@ Use for secrets that originate in `iac-conf-mgmt/prd` and are needed only by
 specific infra repos. These secrets are **never added to `secrets-config.yml`**
 and are never stored in GitHub Actions secrets.
 
-Instead, infra repos hold `DOPPLER_TOKEN_IAC` (a read-only service token for
+Instead, infra repos hold `GH_ACTION_DOPPLER_IAC_CONF_MGMT` (a read-only service token for
 `iac-conf-mgmt/prd`) and fetch secrets at CI runtime using
 `dopplerhq/secrets-fetch-action`.
 
@@ -50,7 +50,7 @@ Examples: `MSSQL_SA_PASSWORD`, `QDRANT_API_KEY`.
 **To add a new infra repo to Tier 2:**
 
 1. Create a read-only Doppler service token for `iac-conf-mgmt/prd`
-2. `gh secret set DOPPLER_TOKEN_IAC --repo <user>/<infra-repo>`
+2. `gh secret set GH_ACTION_DOPPLER_IAC_CONF_MGMT --repo <user>/<infra-repo>`
    (or add the repo to the `_infra_repos` anchor in `secrets-config.yml` so
    secrets-sync distributes the token automatically)
 3. Add a `dopplerhq/secrets-fetch-action` step to the repo's workflow

@@ -31,12 +31,12 @@ Actions secrets.
 
 - Scoped to one Doppler config (`iac-conf-mgmt/prd`)
 - Never duplicated into the secrets-sync Doppler project
-- Each infra repo holds `DOPPLER_TOKEN_IAC` (distributed via secrets-sync Tier 1)
+- Each infra repo holds `GH_ACTION_DOPPLER_IAC_CONF_MGMT` (distributed via secrets-sync Tier 1)
 - The token itself is read-only and grants access to the full `iac-conf-mgmt/prd` config
 
 ```text
 secrets-sync repo
-  └─ distributes DOPPLER_TOKEN_IAC ──► ansible-proxmox-apps
+  └─ distributes GH_ACTION_DOPPLER_IAC_CONF_MGMT ──► ansible-proxmox-apps
                                             │
                                             └─ CI runtime: dopplerhq/secrets-fetch-action
                                                  └─ fetches from iac-conf-mgmt/prd
@@ -57,7 +57,7 @@ and infra secrets are fetched only during CI runs.
 
 ### Tier 2 Token Scope
 
-The `DOPPLER_TOKEN_IAC` service token is:
+The `GH_ACTION_DOPPLER_IAC_CONF_MGMT` service token is:
 
 - **Read-only** — cannot modify Doppler secrets
 - **Scoped to `iac-conf-mgmt/prd`** — cannot access other Doppler projects
