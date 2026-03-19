@@ -64,13 +64,9 @@ The `DOPPLER_TOKEN_IAC` service token is:
 - **Stored as a GitHub Actions secret** — encrypted at rest, masked in logs
 - Protected by branch protection + CODEOWNERS against unauthorized workflow edits
 
-Remaining risk: on Doppler Free/Developer plan, service tokens scope to the
-entire config (not individual secrets). Mitigation: the token is read-only, and
+Remaining risk: on the Doppler free plan, service tokens scope to the entire
+config (not individual secrets). Mitigation: the token is read-only, and
 access to it is limited to repos that genuinely need infra secrets.
-
-Future improvement (Doppler Team plan): create a minimal `ci-sync` config with
-cross-project references to only the required secrets, or use OIDC Service
-Account Identities to eliminate static tokens entirely.
 
 ## Setup Branch Protection
 
