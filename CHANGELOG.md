@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.2](https://github.com/JacobPEvans/secrets-sync/compare/v0.6.1...v0.6.2) (2026-03-19)
+
+
+### Bug Fixes
+
+* add nix-devenv to _all_repos anchor for full secret distribution ([#34](https://github.com/JacobPEvans/secrets-sync/issues/34)) ([0989a0d](https://github.com/JacobPEvans/secrets-sync/commit/0989a0df1468e30efec45f26930c49033d9c706c))
+
 ## [0.6.1](https://github.com/JacobPEvans/secrets-sync/compare/v0.6.0...v0.6.1) (2026-03-19)
 
 
