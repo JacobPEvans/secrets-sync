@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.3](https://github.com/JacobPEvans/secrets-sync/compare/v0.6.2...v0.6.3) (2026-03-20)
+
+
+### Bug Fixes
+
+* **logging:** add warning annotations for inaccessible repos ([#33](https://github.com/JacobPEvans/secrets-sync/issues/33)) ([dae4607](https://github.com/JacobPEvans/secrets-sync/commit/dae4607a8c34044e019f2525145b41cf6dfb3f22))
+
 ## [0.6.2](https://github.com/JacobPEvans/secrets-sync/compare/v0.6.1...v0.6.2) (2026-03-19)
 
 
