@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.4](https://github.com/JacobPEvans/secrets-sync/compare/v0.6.3...v0.6.4) (2026-03-23)
+
+
+### Bug Fixes
+
+* add terraform-runs-on to secret distribution ([#38](https://github.com/JacobPEvans/secrets-sync/issues/38)) ([377cf9b](https://github.com/JacobPEvans/secrets-sync/commit/377cf9b852ac7f2970eec2a0a4eca94bbd55ebf9))
+
 ## [0.6.3](https://github.com/JacobPEvans/secrets-sync/compare/v0.6.2...v0.6.3) (2026-03-20)
 
 
