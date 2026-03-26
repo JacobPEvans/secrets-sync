@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.0](https://github.com/JacobPEvans/secrets-sync/compare/v0.6.4...v0.7.0) (2026-03-26)
+
+
+### Features
+
+* add OpenRouter API key distribution and variable sync support ([#40](https://github.com/JacobPEvans/secrets-sync/issues/40)) ([0ce8a34](https://github.com/JacobPEvans/secrets-sync/commit/0ce8a343275345933ac20e7d33ce465a94e40b0b))
+
 ## [0.6.4](https://github.com/JacobPEvans/secrets-sync/compare/v0.6.3...v0.6.4) (2026-03-23)
 
 
