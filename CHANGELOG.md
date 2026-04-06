@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.1](https://github.com/JacobPEvans/secrets-sync/compare/v0.7.0...v0.7.1) (2026-04-06)
+
+
+### Bug Fixes
+
+* remove CLAUDE_CODE_OAUTH_TOKEN from secret distribution ([#42](https://github.com/JacobPEvans/secrets-sync/issues/42)) ([6b3fdce](https://github.com/JacobPEvans/secrets-sync/commit/6b3fdce926871ebe94d80b0f905c0d857f19b4b3))
+
 ## [0.7.0](https://github.com/JacobPEvans/secrets-sync/compare/v0.6.4...v0.7.0) (2026-03-26)
 
 
