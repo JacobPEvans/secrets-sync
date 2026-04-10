@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.8.0](https://github.com/JacobPEvans/secrets-sync/compare/v0.7.1...v0.8.0) (2026-04-10)
+
+
+### Features
+
+* **config:** add terraform-runs-on to Tier 2 infra repos ([#44](https://github.com/JacobPEvans/secrets-sync/issues/44)) ([c4de934](https://github.com/JacobPEvans/secrets-sync/commit/c4de934ed3b2674069f9f34e54a90ced20260ef7))
+
 ## [0.7.1](https://github.com/JacobPEvans/secrets-sync/compare/v0.7.0...v0.7.1) (2026-04-06)
 
 
