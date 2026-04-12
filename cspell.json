@@ -6,10 +6,12 @@
     "https://raw.githubusercontent.com/JacobPEvans/.github/main/cspell/base.json"
   ],
   "words": [
+    "agentics",
+    "githubnext",
     "homeassistant",
     "jpoehnelt",
     "qdrant",
     "unifi"
   ],
-  "ignorePaths": [".git", "node_modules", "*.lock"]
+  "ignorePaths": [".git", "node_modules", "*.lock", ".github/aw/**"]
 }
