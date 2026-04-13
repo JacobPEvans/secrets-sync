@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.9.1](https://github.com/JacobPEvans/secrets-sync/compare/v0.9.0...v0.9.1) (2026-04-13)
+
+
+### Bug Fixes
+
+* **gh-aw:** recompile workflows with v0.68.1 ([0fdb4b8](https://github.com/JacobPEvans/secrets-sync/commit/0fdb4b8d731198e98399647f2534a6fedc0cfc0b))
+
 ## [0.9.0](https://github.com/JacobPEvans/secrets-sync/compare/v0.8.0...v0.9.0) (2026-04-12)
 
 
