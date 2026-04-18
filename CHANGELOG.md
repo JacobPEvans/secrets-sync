@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.10.0](https://github.com/JacobPEvans/secrets-sync/compare/v0.9.1...v0.10.0) (2026-04-18)
+
+
+### Features
+
+* add GitHub Actions variable sync support ([24fcc13](https://github.com/JacobPEvans/secrets-sync/commit/24fcc13afe9b4864562aba808fc13fc625e39812))
+
 ## [0.9.1](https://github.com/JacobPEvans/secrets-sync/compare/v0.9.0...v0.9.1) (2026-04-13)
 
 
