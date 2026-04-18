@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.12.0](https://github.com/JacobPEvans/secrets-sync/compare/v0.11.0...v0.12.0) (2026-04-18)
+
+
+### Features
+
+* add AI_MODEL_FREE and AI_MODEL_MAX variables ([#68](https://github.com/JacobPEvans/secrets-sync/issues/68)) ([5bf7ad9](https://github.com/JacobPEvans/secrets-sync/commit/5bf7ad94b5dcca3c3b28077df88005eeb982c84b))
+
 ## [0.11.0](https://github.com/JacobPEvans/secrets-sync/compare/v0.10.0...v0.11.0) (2026-04-18)
 
 
