@@ -73,3 +73,36 @@ Edit config and push. To fully remove:
 ```bash
 gh secret remove SECRET_NAME --repo <user>/target-repo
 ```
+
+## Variables
+
+GitHub Actions variables (non-sensitive config values) are supported alongside secrets.
+
+### Config format
+
+```yaml
+variables:
+  - name: VARIABLE_NAME
+    # Description of what this variable is for
+    repositories:
+      - repo-1
+      - repo-2
+```
+
+Same conventions as secrets: no owner prefix, `__SELF__` supported, alphabetical ordering.
+
+### Adding a variable
+
+1. Edit `secrets-config.yml`
+2. `gh variable set VARIABLE_NAME --repo <user>/secrets-sync --body "value"`
+3. Push
+
+Variable values are stored on the secrets-sync repo itself — never as text in the config file. The workflow reads them at runtime and pushes to target repos.
+
+### Removing a variable
+
+Edit config and push. To fully remove from a target repo:
+
+```bash
+gh variable delete VARIABLE_NAME --repo <user>/target-repo
+```

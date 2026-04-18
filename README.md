@@ -6,7 +6,7 @@
 [![Repo Size](https://img.shields.io/github/repo-size/JacobPEvans/secrets-sync)](https://github.com/JacobPEvans/secrets-sync)
 [![Forks](https://img.shields.io/github/forks/JacobPEvans/secrets-sync?style=flat)](https://github.com/JacobPEvans/secrets-sync/network/members)
 
-Centralized GitHub Actions secret management. Define secrets once, sync them everywhere automatically.
+Centralized GitHub Actions secret and variable management. Define once, sync everywhere automatically.
 
 ## What is this?
 
@@ -36,6 +36,7 @@ The configuration automatically adapts to your GitHub username.
    - Repository access: Select the repositories that need secrets synced
    - Permissions:
      - **Secrets**: ✅ Read and write
+     - **Variables**: ✅ Read and write
      - **Metadata**: ✅ Read-only (auto-selected)
      - All other permissions: ❌ Unselected
 3. Generate and **immediately copy** the token (you won't see it again)
