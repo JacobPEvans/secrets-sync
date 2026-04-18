@@ -16,8 +16,8 @@ Three common causes, in order of likelihood:
    exact repo names if any are inaccessible.
 
 2. **PAT lacks permissions** — The token needs: `Secrets: Read & Write`,
-   `Metadata: Read-only`. Codespaces secrets and Dependabot secrets permissions
-   are also required if syncing to those scopes.
+   `Variables: Read & Write`, `Metadata: Read-only`. Codespaces secrets and
+   Dependabot secrets permissions are also required if syncing to those scopes.
 
 3. **Archived repository** — GitHub rejects secret writes to archived repos.
    Remove the repo from `secrets-config.yml`.

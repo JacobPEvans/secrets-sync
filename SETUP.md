@@ -7,7 +7,7 @@
    - Name: `secrets-sync-action`
    - Expiration: 90 days
    - Repository access: Select target repos
-   - Permissions: `Secrets: Read/write`, `Metadata: Read-only`
+   - Permissions: `Secrets: Read/write`, `Variables: Read/write`, `Metadata: Read-only`
 3. Copy token
 
 ## Set Secrets
@@ -15,6 +15,14 @@
 ```bash
 gh secret set GH_PAT_SECRETS_SYNC_ACTION --repo <user>/secrets-sync
 gh secret set YOUR_SECRET --repo <user>/secrets-sync
+```
+
+## Set Variables
+
+Variable values are stored on the secrets-sync repo itself, then pushed to targets by the workflow.
+
+```bash
+gh variable set YOUR_VARIABLE --repo <user>/secrets-sync --body "value"
 ```
 
 ## Test
