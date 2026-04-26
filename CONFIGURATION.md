@@ -16,6 +16,10 @@ secrets:
 - `__SELF__` resolves to profile repo
 - Sort repos alphabetically for maintainability
 - Comments supported
+- `source:` (optional) — name of the GitHub Actions secret on this repo to read the value from.
+  Defaults to the value of the `name` field.
+  Use when the destination secret name on target repos differs from the source secret name stored here
+  (e.g., a broader-scoped token published under a narrower alias).
 
 ## Two-Tier Distribution Model
 
