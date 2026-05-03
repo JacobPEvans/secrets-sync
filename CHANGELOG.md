@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.13.0](https://github.com/JacobPEvans/secrets-sync/compare/v0.12.0...v0.13.0) (2026-05-03)
+
+
+### Features
+
+* add mlx-benchmarks to secret distribution ([#71](https://github.com/JacobPEvans/secrets-sync/issues/71)) ([67c80c1](https://github.com/JacobPEvans/secrets-sync/commit/67c80c1d6d69919acf12606f3614526fb2015271))
+* distribute jacobpevans-claude App credentials ([#76](https://github.com/JacobPEvans/secrets-sync/issues/76)) ([10678f9](https://github.com/JacobPEvans/secrets-sync/commit/10678f95222e246c42db4922006d499d8e6b9b98))
+* move non-sensitive secrets to variables ([#70](https://github.com/JacobPEvans/secrets-sync/issues/70)) ([5688fe9](https://github.com/JacobPEvans/secrets-sync/commit/5688fe9730845f8220a6c77fa4750a3d1cece46f))
+* sync HF_TOKEN_WRITE_ALL to mlx-benchmarks as HF_TOKEN ([#73](https://github.com/JacobPEvans/secrets-sync/issues/73)) ([fb6ab7a](https://github.com/JacobPEvans/secrets-sync/commit/fb6ab7a1d5dc33e849d64b00d312a4fd2ec8e3a4))
+* **sync:** add source rename for variables + migrate App credentials ([8eab278](https://github.com/JacobPEvans/secrets-sync/commit/8eab278a5b0312bbb13c51cbc89046916dd32995))
+
+
+### Bug Fixes
+
+* **ci:** remove deprecated GH_ACTION_JACOBPEVANS_APP_ID from workflow secrets ([#75](https://github.com/JacobPEvans/secrets-sync/issues/75)) ([5d4581e](https://github.com/JacobPEvans/secrets-sync/commit/5d4581ec3863f1e9c7686c71dccc0fb760829b9f))
+
 ## [0.12.0](https://github.com/JacobPEvans/secrets-sync/compare/v0.11.0...v0.12.0) (2026-04-18)
 
 
