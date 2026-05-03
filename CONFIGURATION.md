@@ -16,10 +16,10 @@ secrets:
 - `__SELF__` resolves to profile repo
 - Sort repos alphabetically for maintainability
 - Comments supported
-- `source:` (optional) — name of the GitHub Actions secret on this repo to read the value from.
-  Defaults to the value of the `name` field.
-  Use when the destination secret name on target repos differs from the source secret name stored here
-  (e.g., a broader-scoped token published under a narrower alias).
+- `source:` (optional) — name of the GitHub Actions secret (or variable, for entries under `variables:`)
+  on this repo to read the value from. Defaults to the value of the `name` field.
+  Use when the destination name on target repos differs from the source name stored here
+  (e.g., a JACOBPEVANS-prefixed source published under a generic canonical alias).
 
 ## Two-Tier Distribution Model
 
@@ -98,10 +98,16 @@ Same conventions as secrets: no owner prefix, `__SELF__` supported, alphabetical
 ### Adding a variable
 
 1. Edit `secrets-config.yml`
-2. `gh variable set VARIABLE_NAME --repo <user>/secrets-sync --body "value"`
+2. Set the variable on the secrets-sync repo itself.
+   - **Without `source:` alias**: use the `name:` value —
+     `gh variable set VARIABLE_NAME --repo <user>/secrets-sync --body "value"`
+   - **With `source:` alias**: use the `source:` value, not `name:` — the workflow
+     reads from `source:` on this repo and distributes under `name:` on targets:
+     `gh variable set SOURCE_NAME --repo <user>/secrets-sync --body "value"`
 3. Push
 
-Variable values are stored on the secrets-sync repo itself — never as text in the config file. The workflow reads them at runtime and pushes to target repos.
+Variable values are stored on the secrets-sync repo itself — never as text in the config file.
+The workflow reads them at runtime and pushes to target repos under the `name:` key.
 
 ### Removing a variable
 
