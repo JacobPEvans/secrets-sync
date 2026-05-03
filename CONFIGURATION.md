@@ -98,10 +98,16 @@ Same conventions as secrets: no owner prefix, `__SELF__` supported, alphabetical
 ### Adding a variable
 
 1. Edit `secrets-config.yml`
-2. `gh variable set VARIABLE_NAME --repo <user>/secrets-sync --body "value"`
+2. Set the variable on the secrets-sync repo itself.
+   - **Without `source:` alias**: use the `name:` value —
+     `gh variable set VARIABLE_NAME --repo <user>/secrets-sync --body "value"`
+   - **With `source:` alias**: use the `source:` value, not `name:` — the workflow
+     reads from `source:` on this repo and distributes under `name:` on targets:
+     `gh variable set SOURCE_NAME --repo <user>/secrets-sync --body "value"`
 3. Push
 
-Variable values are stored on the secrets-sync repo itself — never as text in the config file. The workflow reads them at runtime and pushes to target repos.
+Variable values are stored on the secrets-sync repo itself — never as text in the config file.
+The workflow reads them at runtime and pushes to target repos under the `name:` key.
 
 ### Removing a variable
 
