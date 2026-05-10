@@ -2,7 +2,6 @@
 
 ## [0.13.0](https://github.com/JacobPEvans/secrets-sync/compare/v0.12.0...v0.13.0) (2026-05-03)
 
-
 ### Features
 
 * add mlx-benchmarks to secret distribution ([#71](https://github.com/JacobPEvans/secrets-sync/issues/71)) ([67c80c1](https://github.com/JacobPEvans/secrets-sync/commit/67c80c1d6d69919acf12606f3614526fb2015271))
@@ -11,13 +10,11 @@
 * sync HF_TOKEN_WRITE_ALL to mlx-benchmarks as HF_TOKEN ([#73](https://github.com/JacobPEvans/secrets-sync/issues/73)) ([fb6ab7a](https://github.com/JacobPEvans/secrets-sync/commit/fb6ab7a1d5dc33e849d64b00d312a4fd2ec8e3a4))
 * **sync:** add source rename for variables + migrate App credentials ([8eab278](https://github.com/JacobPEvans/secrets-sync/commit/8eab278a5b0312bbb13c51cbc89046916dd32995))
 
-
 ### Bug Fixes
 
 * **ci:** remove deprecated GH_ACTION_JACOBPEVANS_APP_ID from workflow secrets ([#75](https://github.com/JacobPEvans/secrets-sync/issues/75)) ([5d4581e](https://github.com/JacobPEvans/secrets-sync/commit/5d4581ec3863f1e9c7686c71dccc0fb760829b9f))
 
 ## [0.12.0](https://github.com/JacobPEvans/secrets-sync/compare/v0.11.0...v0.12.0) (2026-04-18)
-
 
 ### Features
 
@@ -25,13 +22,11 @@
 
 ## [0.11.0](https://github.com/JacobPEvans/secrets-sync/compare/v0.10.0...v0.11.0) (2026-04-18)
 
-
 ### Features
 
 * add AI model variables for model config ([#66](https://github.com/JacobPEvans/secrets-sync/issues/66)) ([0d7b15c](https://github.com/JacobPEvans/secrets-sync/commit/0d7b15cf58404c2a8e634d06b6a093acf941e36d))
 
 ## [0.10.0](https://github.com/JacobPEvans/secrets-sync/compare/v0.9.1...v0.10.0) (2026-04-18)
-
 
 ### Features
 
@@ -39,20 +34,11 @@
 
 ## [0.9.1](https://github.com/JacobPEvans/secrets-sync/compare/v0.9.0...v0.9.1) (2026-04-13)
 
-
 ### Bug Fixes
 
 * **gh-aw:** recompile workflows with v0.68.1 ([0fdb4b8](https://github.com/JacobPEvans/secrets-sync/commit/0fdb4b8d731198e98399647f2534a6fedc0cfc0b))
 
-## [0.9.0](https://github.com/JacobPEvans/secrets-sync/compare/v0.8.0...v0.9.0) (2026-04-12)
-
-
-### Features
-
-* **cspell:** migrate to shared org-wide dictionary hierarchy ([868bebc](https://github.com/JacobPEvans/secrets-sync/commit/868bebca2091b689d4263763841081d7d7db0184))
-
 ## [0.8.0](https://github.com/JacobPEvans/secrets-sync/compare/v0.7.1...v0.8.0) (2026-04-10)
-
 
 ### Features
 
@@ -60,13 +46,11 @@
 
 ## [0.7.1](https://github.com/JacobPEvans/secrets-sync/compare/v0.7.0...v0.7.1) (2026-04-06)
 
-
 ### Bug Fixes
 
 * remove CLAUDE_CODE_OAUTH_TOKEN from secret distribution ([#42](https://github.com/JacobPEvans/secrets-sync/issues/42)) ([6b3fdce](https://github.com/JacobPEvans/secrets-sync/commit/6b3fdce926871ebe94d80b0f905c0d857f19b4b3))
 
 ## [0.7.0](https://github.com/JacobPEvans/secrets-sync/compare/v0.6.4...v0.7.0) (2026-03-26)
-
 
 ### Features
 
@@ -74,13 +58,11 @@
 
 ## [0.6.4](https://github.com/JacobPEvans/secrets-sync/compare/v0.6.3...v0.6.4) (2026-03-23)
 
-
 ### Bug Fixes
 
 * add terraform-runs-on to secret distribution ([#38](https://github.com/JacobPEvans/secrets-sync/issues/38)) ([377cf9b](https://github.com/JacobPEvans/secrets-sync/commit/377cf9b852ac7f2970eec2a0a4eca94bbd55ebf9))
 
 ## [0.6.3](https://github.com/JacobPEvans/secrets-sync/compare/v0.6.2...v0.6.3) (2026-03-20)
-
 
 ### Bug Fixes
 
@@ -88,13 +70,11 @@
 
 ## [0.6.2](https://github.com/JacobPEvans/secrets-sync/compare/v0.6.1...v0.6.2) (2026-03-19)
 
-
 ### Bug Fixes
 
 * add nix-devenv to _all_repos anchor for full secret distribution ([#34](https://github.com/JacobPEvans/secrets-sync/issues/34)) ([0989a0d](https://github.com/JacobPEvans/secrets-sync/commit/0989a0df1468e30efec45f26930c49033d9c706c))
 
 ## [0.6.1](https://github.com/JacobPEvans/secrets-sync/compare/v0.6.0...v0.6.1) (2026-03-19)
-
 
 ### Bug Fixes
 
@@ -102,12 +82,10 @@
 
 ## [0.6.0](https://github.com/JacobPEvans/secrets-sync/compare/v0.5.0...v0.6.0) (2026-03-19)
 
-
 ### Features
 
 * add claude-code-plugins to github app repos ([#27](https://github.com/JacobPEvans/secrets-sync/issues/27)) ([a6aa9d8](https://github.com/JacobPEvans/secrets-sync/commit/a6aa9d8c632e701dd84621b1b4cda6a6e862c3ce))
 * introduce two-tier secret distribution architecture ([aec4bca](https://github.com/JacobPEvans/secrets-sync/commit/aec4bca7f508374c2e38ae4275061dcbf76a794b))
-
 
 ### Bug Fixes
 
@@ -115,13 +93,11 @@
 
 ## [0.5.0](https://github.com/JacobPEvans/secrets-sync/compare/v0.4.0...v0.5.0) (2026-03-11)
 
-
 ### Features
 
 * distribute GH App secrets to nix-ai, nix-darwin, nix-home ([#23](https://github.com/JacobPEvans/secrets-sync/issues/23)) ([b1e1264](https://github.com/JacobPEvans/secrets-sync/commit/b1e12648b085919b9739359f2e0ca68c9a9409b5))
 
 ## [0.4.0](https://github.com/JacobPEvans/secrets-sync/compare/v0.3.0...v0.4.0) (2026-03-11)
-
 
 ### Features
 
@@ -129,13 +105,11 @@
 
 ## [0.3.0](https://github.com/JacobPEvans/secrets-sync/compare/v0.2.1...v0.3.0) (2026-03-07)
 
-
 ### Features
 
 * **renovate:** extend org-wide shared preset ([2782f16](https://github.com/JacobPEvans/secrets-sync/commit/2782f1620765e556a34c2ea897783aa44714ddd0))
 
 ## [0.2.1](https://github.com/JacobPEvans/secrets-sync/compare/v0.2.0...v0.2.1) (2026-03-05)
-
 
 ### Bug Fixes
 
@@ -152,7 +126,6 @@
 
 ## [0.2.0](https://github.com/JacobPEvans/secrets-sync/compare/v0.1.0...v0.2.0) (2026-03-05)
 
-
 ### Features
 
 * add ANTHROPIC_API_KEY to all_repos distribution ([7812d62](https://github.com/JacobPEvans/secrets-sync/commit/7812d621f2f8a98845d2474e263638ac02f30a1c))
@@ -162,7 +135,6 @@
 * **gh-aw:** add malicious-code-scan workflow, update secrets config ([ce0d946](https://github.com/JacobPEvans/secrets-sync/commit/ce0d9460b50c131d8c97d45c84ade5b4ebfbf7c3))
 * secrets-sync - centralized GitHub Actions secret management ([5c067fb](https://github.com/JacobPEvans/secrets-sync/commit/5c067fb03a0d20515e3717eb882eb168c5823159))
 * yaml anchors, new secrets, badges, security doc fix ([46e3ee3](https://github.com/JacobPEvans/secrets-sync/commit/46e3ee3552ed07f888cb550d31a8b9cf208a5641))
-
 
 ### Bug Fixes
 
