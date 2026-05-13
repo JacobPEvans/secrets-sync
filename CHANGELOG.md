@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.14.0](https://github.com/JacobPEvans/secrets-sync/compare/v0.13.0...v0.14.0) (2026-05-13)
+
+
+### Features
+
+* **sync:** distribute missing secrets and healthcheck variables ([#79](https://github.com/JacobPEvans/secrets-sync/issues/79)) ([602d0bd](https://github.com/JacobPEvans/secrets-sync/commit/602d0bd04f5f5fccf85df53ccd0d3a52bf6f5005))
+
 ## [0.13.0](https://github.com/JacobPEvans/secrets-sync/compare/v0.12.0...v0.13.0) (2026-05-03)
 
 ### Features
