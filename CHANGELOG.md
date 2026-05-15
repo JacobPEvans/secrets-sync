@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.15.0](https://github.com/JacobPEvans/secrets-sync/compare/v0.14.0...v0.15.0) (2026-05-15)
+
+
+### Features
+
+* **config:** distribute jacobpevans-claude App creds to all github_app_repos ([#82](https://github.com/JacobPEvans/secrets-sync/issues/82)) ([3ca06b3](https://github.com/JacobPEvans/secrets-sync/commit/3ca06b34b88d542092e5609497b9ccc4988339bf))
+
 ## [0.14.0](https://github.com/JacobPEvans/secrets-sync/compare/v0.13.0...v0.14.0) (2026-05-13)
 
 
